@@ -10,13 +10,7 @@ const jwt = new JwtService(config.jwt)
 class Auth {
   async isAuthorized ({ context }) {
     if (!context.user) {
-      return error({
-        payload: {
-          message: 'User not authorized',
-          code: 'user-not-found',
-        },
-        statusCode: 401
-      })
+      return error('user-not-authorized')
     }
   }
 

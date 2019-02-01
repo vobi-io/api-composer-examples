@@ -1,6 +1,5 @@
 const path = require('path')
-// const { ApiComposer } = require('@giiorg/vobi-api-composer-experimental')
-const { ApiComposer } = require('../../lib')
+const { ApiComposer } = require('@vobi/api-composer')
 
 const apiComposer = new ApiComposer()
 
