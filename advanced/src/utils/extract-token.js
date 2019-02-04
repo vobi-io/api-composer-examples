@@ -1,3 +1,5 @@
+'use strict'
+
 const AUTH_HEADER = 'authorization'
 const DEFAULT_TOKEN_BODY_FIELD = 'access_token'
 const DEFAULT_TOKEN_QUERY_PARAM_NAME = 'access_token'

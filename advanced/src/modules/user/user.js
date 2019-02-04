@@ -48,6 +48,26 @@ schema.statics.findById = function (id) {
   })
 }
 
+schema.methods.toJSON = function() {
+  const obj = this.toObject()
+  
+  delete obj.password
+  delete obj.__v
+
+  return obj
+}
+
+schema.methods.toJSONWithoutId = function() {
+  const obj = this.toObject()
+
+  delete obj.password
+  delete obj.__v
+  delete obj._id
+  
+  return obj
+}
+
+
 const UserModel = mongoose.model('User', schema) 
 
 module.exports = UserModel
